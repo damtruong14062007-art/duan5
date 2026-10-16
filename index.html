@@ -33,8 +33,29 @@
             transform: translateX(-50%);
         }
 
-        .nav-link:hover::after, .nav-link.active::after {
+        .nav-link:hover::after {
             width: 70%;
+        }
+
+        .search-input {
+            border-radius: 20px 0 0 20px;
+            border: none;
+            padding-left: 15px;
+            font-size: 0.9rem;
+        }
+
+        .search-btn {
+            border-radius: 0 20px 20px 0;
+            border: none;
+            background-color: #ffc107;
+            color: #212529;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .search-btn:hover {
+            background-color: #e0a800;
+            color: #212529;
         }
 
         .hero-section {
@@ -153,13 +174,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-lg-3 align-items-lg-center">
                     <li class="nav-item"><a class="nav-link active" href="#trang-chu">Trang chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diem-den">Điểm đến</a></li>
                     <li class="nav-item"><a class="nav-link" href="#am-thuc">Ẩm thực</a></li>
                     <li class="nav-item"><a class="nav-link" href="#khach-san">Khách sạn</a></li>
                     <li class="nav-item"><a class="nav-link" href="#lich-trinh">Lên lịch trình</a></li>
                 </ul>
+                <form class="d-flex mt-2 mt-lg-0" role="search">
+                    <div class="input-group">
+                        <input class="form-control search-input" type="search" placeholder="Tìm địa điểm, món ăn..." aria-label="Search">
+                        <button class="btn search-btn px-3" type="submit">🔍</button>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
